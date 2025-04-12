@@ -45,3 +45,9 @@ It features a responsive UI, a video listing page, and a video player page.
    ```sh
    git clone https://github.com/your-username/youtube-clone.git
    cd youtube-clone
+   ## 🐳 Quick Start with Docker
+
+2. Run this project instantly using Docker:
+
+```bash
+docker pull pkriya/youtube-clone-demo && docker run -d -p 3000:3000 pkriya/youtube-clone-demo
