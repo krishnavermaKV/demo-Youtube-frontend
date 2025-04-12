@@ -1,0 +1,30 @@
+{
+    "version": "1.0",
+    "services": {
+          "mongodb": {
+            "image": "mongo",
+            "container_name": "mongodb",
+            "ports": [
+                "27017:27017"
+            ],
+            "volumes": [
+                "mongodb-data:/data/db"
+            ]
+          },
+          "youtube-clone-demo": {
+            "image": "youtube-clone-demo",
+            "container_name": "clone_app",
+            "ports": [
+                "3000:3000"
+            ],
+            "environment": [
+                {
+                    "MONGO_URL": "mongo://mongodb:27017"
+                }
+            ]
+          }
+    },
+    "volumes": {
+        "mongodb_data": null
+    }
+}
